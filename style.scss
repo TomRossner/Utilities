@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(39, 39, 39);
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    min-width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.category-container{
+    width: 70%;
+    background-color: rgb(48, 48, 48);
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.category-title{
+    font-size: 2.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: rgb(250, 250, 250);
+    margin: 1rem 0 2rem 0;
+    text-align: center;
+}
+
+h1{
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: rgb(87, 255, 87);
+    margin: 1rem 0 2rem 0;
+    text-align: center;
+}
+
+.title{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(250, 250, 250);
+    margin: 1rem 0 2rem 0;
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 2rem;
+    // border: 2px solid rgb(250, 250, 250);
+    // padding: 2rem 0;
+}
+
+
+// Button #1
+
+.button1{
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    color: black;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    transition: color 0.2s ease, 
+    background-color 0.2s ease, 
+    text-decoration 0.5s ease;
+}
+
+.button1:hover{
+    color: rgb(250, 250, 250);
+    background-color: black;
+    text-decoration: underline 2px;
+    text-underline-offset: 3px;
+}
+
+.button1:hover i.gg-chevron-right{
+    transform: translateX(45px);
+    opacity: 1;
+}
+
+.button1 span{
+    transition: transform 0.5s ease;
+}
+
+.button1:hover span{
+    transform: translateX(-15px);
+}
+
+i.gg-chevron-right{
+    opacity: 0;
+    transform: translateX(35px);
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+
+// Button #2
+
+.button2{
+    padding: 0.5rem 2rem;
+    background-image: linear-gradient(30deg, rgb(95, 52, 252) 0%, rgb(20, 3, 82) 51%, rgb(95, 52, 252) 100%);
+    background-size: 400%;
+    color: rgb(250, 250, 250);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-position 0.5s ease, transform 0.3s ease;
+}
+
+.button2:hover{
+    background-image: linear-gradient(30deg, rgb(95, 52, 252) 0%, rgb(27, 4, 110) 51%, rgb(95, 52, 252) 100%);
+    background-position: top right;
+    transform: scale(1.03);
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+// Button #3
+
+.button3{
+    padding: 0.5rem 2rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    border: none;
+    background-color: transparent;
+    color: rgb(202, 202, 202);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.button3 hr{
+    width: 0%;
+    opacity: 0;
+    border: 1px solid;
+    color: rgb(202, 202, 202);
+    transition: width 0.2s ease-in, opacity 0.1s, color 0.5s ease;
+}
+
+.button3:hover hr{
+    width: 100%;
+    opacity: 1;
+    color: rgb(250, 250, 250);
+}
+
+.button3:hover{
+    transform: scale(1.05);
+    color: rgb(250, 250, 250);
+    text-shadow: 0 0 5px black;
+}
+
+
+// MENUS
+
+// Menu #1
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+.line{
+    width: 100%;
+    height: 4px;
+    margin: 0.4rem 0;
+    background-color: rgb(202, 202, 202);
+    transition: background-color 0.3s ease, width 0.5s ease;
+}
+
+.menu-container:hover .line{
+    background-color: rgb(250, 250, 250);
+}
+
+.l1, .l2, .l3{
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.x .l1{
+    transform: translateY(15px) rotateZ(-45deg);
+    transition: transform 0.5s ease;
+}
+
+.x .l3{
+    transform: translateY(-15px) rotateZ(45deg);
+    transition: transform 0.5s ease;
+}
+
+.x .l2{
+animation-name: "menuAnim";
+animation-fill-mode: both;
+animation-duration: 0.3s;
+}
+
+@keyframes menuAnim{
+    0%{
+        transform: translateX(0%);
+        opacity: 1;
+        transition: opacity 0.2s, transform 0.5s ease;
+    }
+
+    100%{
+        transform: translateX(150%);
+        opacity: 0;
+        transition: opacity 0.2s, transform 0.5s ease;
+    }
+}
+
+@media screen and (max-width: 716px){
+    body{
+        overflow-y: visible;
+    }
+
+    .category-container{
+        width: 95%;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .btn-container{
+        width: 100%;
+    }
+}
